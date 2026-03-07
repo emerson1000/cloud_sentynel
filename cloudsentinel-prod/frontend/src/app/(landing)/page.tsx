@@ -27,7 +27,7 @@ export default function LandingPage() {
         <div className="flex gap-7 items-center">
           <a href="#features" className="text-[#475569] text-[13px] cursor-pointer hover:text-[#f59e0b] transition-colors tracking-[.05em]">Features</a>
           <a href="#pricing"  className="text-[#475569] text-[13px] cursor-pointer hover:text-[#f59e0b] transition-colors tracking-[.05em]">Pricing</a>
-          <a href="https://docs.cloudsentinel.io" target="_blank" className="text-[#475569] text-[13px] cursor-pointer hover:text-[#f59e0b] transition-colors tracking-[.05em]">Docs</a>
+          <a href="https://github.com/emerson1000/cloud_sentynel#readme" target="_blank" className="text-[#475569] text-[13px] cursor-pointer hover:text-[#f59e0b] transition-colors tracking-[.05em]">Docs</a>
           <Link href="/auth/login"    className="text-[#94a3b8] text-[13px] hover:text-[#f59e0b] transition-colors tracking-[.05em]">Log in</Link>
           <Link href="/auth/register" className="bg-[#f59e0b] text-[#03070f] font-medium text-xs px-5 py-2.5 rounded-md tracking-[.08em] hover:bg-[#fbbf24] transition-all hover:-translate-y-px">Get Started →</Link>
         </div>
