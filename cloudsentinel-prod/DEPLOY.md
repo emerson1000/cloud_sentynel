@@ -48,11 +48,17 @@ vercel --prod
 ```
 
 ### 2.2 Variables de entorno en Vercel Dashboard
+1. Ve a Vercel Dashboard → tu proyecto → Settings → Environment Variables
+2. Agrega estas variables (obtén los valores de Supabase):
+
 ```
 NEXT_PUBLIC_SUPABASE_URL      = https://xxxx.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY = eyJhbGci...
 NEXT_PUBLIC_API_URL           = https://cloudsentinel-api.azurecontainerapps.io
+NEXT_PUBLIC_APP_URL           = https://app.cloudsentinel.io
 ```
+
+**Nota de seguridad:** Nunca subas archivos `.env*` a GitHub. Usa `.env.example` como plantilla y configura las variables en Vercel Dashboard.
 
 ### 2.3 Dominio personalizado (opcional)
 Vercel Dashboard → Domains → Add `app.cloudsentinel.io`
