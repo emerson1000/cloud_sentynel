@@ -49,6 +49,38 @@ Ver [DEPLOY.md](./DEPLOY.md) para instrucciones completas paso a paso.
 
 ---
 
+# Scan System Patch
+
+## Files to update in GitHub
+
+### 1. backend/api.py
+Replace with the new api.py (was api_v2.py). Adds:
+- GET  /api/scan/quota         → returns weekly usage
+- POST /api/scan/{id}          → on-demand scan with quota enforcement
+- POST /api/connections        → auto-triggers first scan in background
+
+### 2. frontend/src/components/ui/ScanButton.tsx
+Replace with new version. Shows:
+- "1/2 this week · resets 2026-03-09" under the button
+- Button disabled + grayed when limit reached
+- Free users see lock icon + "Upgrade" link
+
+### 3. Run in Supabase SQL Editor
+backend/migrations/002_scan_quota.sql
+
+## Scan rules
+| Tier       | Weekly on-demand scans | Auto (Monday) |
+|------------|----------------------|---------------|
+| free       | 0 (locked)           | ✅            |
+| pro        | 2                    | ✅            |
+| enterprise | unlimited            | ✅            |
+
+## First scan
+When a user connects their first cloud account, a scan runs automatically
+in the background (no quota consumed). User sees dashboard right away.
+---
+
+
 ## Estructura del proyecto
 
 ```
