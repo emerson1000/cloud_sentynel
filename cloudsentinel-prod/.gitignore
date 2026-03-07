@@ -1,0 +1,32 @@
+# ── Node / Next.js ────────────────────────────────────────────────────────
+node_modules/
+.next/
+out/
+dist/
+.vercel/
+
+# ── Python ────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# ── Environment variables (NEVER COMMIT THESE) ───────────────────────────
+.env
+.env.local
+.env.production
+.env*.local
+
+# ── OS files ──────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── IDE ───────────────────────────────────────────────────────────────────
+.idea/
+.vscode/settings.json
+
+# ── Logs ──────────────────────────────────────────────────────────────────
+*.log
+npm-debug.log*

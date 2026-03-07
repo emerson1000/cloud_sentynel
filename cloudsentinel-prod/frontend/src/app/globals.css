@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  ::-webkit-scrollbar { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-track { background: #03070f; }
+  ::-webkit-scrollbar-thumb { background: #0d2340; border-radius: 2px; }
+  ::-webkit-scrollbar-thumb:hover { background: #1e3a5f; }
+}
+
+@layer utilities {
+  .font-display { font-family: var(--font-display); }
+  .font-mono    { font-family: var(--font-mono); }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(245,158,11,.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(245,158,11,.045) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .glow-amber { box-shadow: 0 0 40px rgba(245,158,11,.15); }
+  .glow-red   { box-shadow: 0 0 20px rgba(239,68,68,.12); }
+}
+
+@keyframes fadeUp   { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeIn   { from { opacity:0; transform:translateY(8px); }  to { opacity:1; transform:translateY(0); } }
+@keyframes spin     { to   { transform: rotate(360deg); } }
+@keyframes checkPop { 0%{transform:scale(0)} 70%{transform:scale(1.2)} 100%{transform:scale(1)} }
+@keyframes pulseDot { 0%,100%{opacity:1} 50%{opacity:.35} }
+
+.animate-fade-up  { animation: fadeUp  .65s ease both; }
+.animate-fade-in  { animation: fadeIn  .35s ease both; }
+.animate-check    { animation: checkPop .4s ease; }
+.animate-spin-slow { animation: spin 2s linear infinite; }
+.pulse-dot        { animation: pulseDot 2s infinite; }
