@@ -59,10 +59,20 @@ export const api = {
 
   scan: {
     trigger: (connId: string) => request<{ report_id: string; report: ReportDetail }>(
-      'POST', '/api/scan', { connection_id: connId }
+      'POST', `/api/scan/${connId}`
     ),
+    quota: () => request<QuotaStatus>('GET', '/api/scan/quota'),
   },
 };
+
+export interface QuotaStatus {
+  allowed:   boolean;
+  used:      number;
+  limit:     number;
+  tier:      string;
+  resets_on: string;
+  reason?:   string;
+}
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 export interface Connection {
