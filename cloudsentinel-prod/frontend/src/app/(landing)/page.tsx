@@ -25,7 +25,9 @@ export default function LandingPage() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#03070f]/85 backdrop-blur-md border-b border-[#0d2340] px-12 flex justify-between items-center h-[60px]">
         <Logo size={16} />
         <div className="flex gap-7 items-center">
-          {['Features','Pricing','Docs'].map(l => <span key={l} className="text-[#475569] text-[13px] cursor-pointer hover:text-[#f59e0b] transition-colors tracking-[.05em]">{l}</span>)}
+          <a href="#features" className="text-[#475569] text-[13px] cursor-pointer hover:text-[#f59e0b] transition-colors tracking-[.05em]">Features</a>
+          <a href="#pricing"  className="text-[#475569] text-[13px] cursor-pointer hover:text-[#f59e0b] transition-colors tracking-[.05em]">Pricing</a>
+          <a href="https://docs.cloudsentinel.io" target="_blank" className="text-[#475569] text-[13px] cursor-pointer hover:text-[#f59e0b] transition-colors tracking-[.05em]">Docs</a>
           <Link href="/auth/login"    className="text-[#94a3b8] text-[13px] hover:text-[#f59e0b] transition-colors tracking-[.05em]">Log in</Link>
           <Link href="/auth/register" className="bg-[#f59e0b] text-[#03070f] font-medium text-xs px-5 py-2.5 rounded-md tracking-[.08em] hover:bg-[#fbbf24] transition-all hover:-translate-y-px">Get Started →</Link>
         </div>
@@ -66,7 +68,7 @@ export default function LandingPage() {
       </div>
 
       {/* FEATURES */}
-      <div className="max-w-[1060px] mx-auto px-6 py-20">
+      <div id="features" className="max-w-[1060px] mx-auto px-6 py-20 scroll-mt-16">
         <div className="text-center mb-14">
           <p className="text-[11px] text-[#f59e0b] tracking-[.15em] uppercase mb-3">Capabilities</p>
           <h2 className="font-display font-extrabold text-[34px]">Everything you need to stop<br/>overpaying for cloud.</h2>
@@ -83,7 +85,7 @@ export default function LandingPage() {
       </div>
 
       {/* PRICING */}
-      <div className="max-w-[960px] mx-auto px-6 pb-24">
+      <div id="pricing" className="max-w-[960px] mx-auto px-6 pb-24 scroll-mt-16">
         <div className="text-center mb-14">
           <p className="text-[11px] text-[#f59e0b] tracking-[.15em] uppercase mb-3">Pricing</p>
           <h2 className="font-display font-extrabold text-[34px]">Simple. No surprises.</h2>
