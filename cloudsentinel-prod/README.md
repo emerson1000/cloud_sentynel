@@ -19,20 +19,20 @@ Detect zombie resources, spending anomalies and optimization opportunities acros
 
 ---
 
-## Quick Start (desarrollo local)
+## Quick Start (local development)
 
 ```bash
-# 1. Clonar
+# 1. Clone
 git clone https://github.com/tu-usuario/cloudsentinel
 cd cloudsentinel
 
 # 2. Frontend
 cd frontend
 cp .env.local.example .env.local
-# → Edita .env.local con tus keys de Supabase
+# → Edit .env.local con tus keys de Supabase
 npm install
 npm run dev
-# Abre http://localhost:3000
+# open http://localhost:3000
 
 # 3. Backend
 cd ../backend
@@ -43,9 +43,9 @@ cp .env.example .env
 uvicorn api:app --reload --port 8000
 ```
 
-## Deploy a producción
+## Deploy to production
 
-Ver [DEPLOY.md](./DEPLOY.md) para instrucciones completas paso a paso.
+see [DEPLOY.md](./DEPLOY.md) for complete instructions step by step
 
 ---
 
@@ -81,7 +81,7 @@ in the background (no quota consumed). User sees dashboard right away.
 ---
 
 
-## Estructura del proyecto
+## Structure Project
 
 ```
 cloudsentinel/
@@ -124,5 +124,5 @@ cloudsentinel/
 
 ---
 
-## Licencia
-MIT
+## MIT LICENCE
+
